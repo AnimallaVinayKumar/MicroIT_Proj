@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch & Clock</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Clock Section -->
+        <div class="clock-section">
+            <h2>Current Time</h2>
+            <div class="clock" id="clock">
+                <!-- Time Display -->
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                <span id="ampm">AM</span>
+            </div>
+            <!-- Date Display -->
+            <div class="date-display" id="dateDisplay"></div>
+            <!-- Sound Toggle Button -->
+            <div class="sound-toggle">
+                <button id="soundToggle" class="btn">Enable Ticking Sound</button>
+            </div>
+        </div>
+
+        <!-- Stopwatch Section -->
+        <div class="stopwatch-section">
+            <h2>Stopwatch</h2>
+            <div class="stopwatch" id="stopwatch">
+                <!-- Stopwatch Time Display -->
+                <span id="sw-hours">00</span>:<span id="sw-minutes">00</span>:<span id="sw-seconds">00</span>:<span id="sw-milliseconds">00</span>
+            </div>
+            <!-- Stopwatch Controls -->
+            <div class="controls">
+                <button id="startBtn" class="btn">Start</button>
+                <button id="stopBtn" class="btn">Stop</button>
+                <button id="resetBtn" class="btn">Reset</button>
+                <button id="lapBtn" class="btn">Lap</button>
+            </div>
+            <!-- Lap Times Section -->
+            <div class="lap-times" id="lapTimes">
+                <h3>Lap Times</h3>
+                <div class="lap-list" id="lapList"></div>
+            </div>
+        </div>
+
+        <!-- Theme Toggle Section -->
+        <div class="theme-switch">
+            <button id="themeToggle" class="btn">Toggle Dark Mode</button>
+        </div>
+    </div>
+
+    <!-- Ticking Sound -->
+    <audio id="tickSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae3b2.mp3" preload="auto"></audio>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

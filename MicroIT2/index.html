@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic setup: character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+
+    <!-- Font and icon styling resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom styles and icons -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main app container -->
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <!-- Optional: Let the user add a base (e.g. their name) -->
+        <div class="base-text-container">
+            <label for="base-text">Enter Name or Base Text:</label>
+            <input type="text" id="base-text" placeholder="Enter your name or any text">
+        </div>
+
+        <!-- Display generated password + copy button -->
+        <div class="password-container">
+            <input type="text" id="password" readonly>
+            <button id="copy-btn" title="Copy to clipboard">
+                <i class="fas fa-copy"></i>
+            </button>
+        </div>
+
+        <!-- Settings to customize password -->
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="4" max="32" value="12">
+            </div>
+
+            <div class="setting">
+                <label for="uppercase">Include Uppercase</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+
+            <div class="setting">
+                <label for="lowercase">Include Lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+
+            <div class="setting">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="setting">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <!-- Generate button -->
+        <button id="generate-btn">Generate Password</button>
+
+        <!-- Password strength indicator -->
+        <div class="strength-meter">
+            <div class="strength-label">Password Strength:</div>
+            <div class="strength-bar">
+                <div class="strength-level"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
